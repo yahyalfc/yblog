@@ -1,8 +1,8 @@
 import React from 'react'
 
 import './post.styles.css'
-import BlogPost from '../blogpost/blogpost.component';
-import SideBar from '../sidebar/sidebar.component';
+import BlogPost from '../../components/blogpost/blogpost.component';
+import SideBar from '../../components/sidebar/sidebar.component';
 
 const Post = () => {
     return(

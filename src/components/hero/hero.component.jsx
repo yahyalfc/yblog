@@ -11,10 +11,12 @@ const Hero = () => {
             <Card>
                 <div className='inlineX'>
                     <Logo />
+                    
                 </div>
                 
                 <Navbar />
             </Card>
+
         </div>
 
     )

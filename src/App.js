@@ -8,7 +8,7 @@ import HomePage from './pages/homepage/homepage.component';
 import Header from './components/header/header.component';
 import Hero from './components/hero/hero.component';
 import Contact from './components/contact/contact.component';
-import Post from './components/post/post.component';
+import Post from './pages/post/post.component';
 import About from './pages/about/about.component'
 function App() {
   return (
