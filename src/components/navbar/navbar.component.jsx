@@ -18,8 +18,7 @@ const Navbar = () => {
             <ul className='navbarMenu'>
                <li><NavLink to='/'>Home</NavLink></li>
                <li><NavLink to='/post'>Posts</NavLink></li> 
-                <li><NavLink to='/about'>About</NavLink></li> 
-               <li><NavLink to='/contact'>Contact</NavLink></li>
+               
             
             </ul>
 
