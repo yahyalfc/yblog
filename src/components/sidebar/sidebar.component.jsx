@@ -1,12 +1,24 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
+import {NavLink} from 'react-router-dom'
 
 import './sidebar.styles.css'
+import blogPost from '../../data/blog.json'
+
 import Card from '../card/card.component'
 
 const SideBar = () => {
     const myStyle = {
         marginBottom: '20px'    
     }
+
+    const [posts, setPosts] = useState ([])
+
+
+    useEffect ( ()=> {
+        const posts = blogPost.data
+        setPosts(posts)
+    }, posts)
+
 
     return(
         <div className='sideBarContainer'>
@@ -28,10 +40,22 @@ const SideBar = () => {
                 </div>
 
                 <div className='recentPosts'>
-                    <div className='recentPost'>
-                        <h3>Post Title</h3>
-                        <span>January 30, 2020</span>
-                    </div>
+                 {
+                    posts.map(post => {
+                        
+                        return (
+                            <NavLink to = {`/post/${post.id}`} >
+                                <div className='recentPost'>
+                                    <h3>{post.blogTitle} </h3>
+                                    <span>{post.postedOn}</span>
+                                </div>
+                            </NavLink>
+                            
+
+                        )
+                    })
+                 }
+                    
                 </div>
             </Card>
         </div>

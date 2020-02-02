@@ -1,20 +1,41 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
 import './blogpost.styles.css'
+import blogPost from '../../data/blog.json'
+
 import Card from '../card/card.component'
 
-const BlogPost = () => {
+const BlogPost = (props) => {
+    console.log(props)
+
+    const [post, setPost] = useState ({})
+    const [postId, setPostId] = useState('')
+
+    useEffect ( ()=> {
+        const postId = props.match.params.postId
+        const post = blogPost.data.find(post => post.id == postId)
+        setPost(post)
+        setPostId(postId)
+    }, [post, props.match.params.postId])
+    //only rerender when post gets changed
+
     return(
         <div className='blogPostContainer'>
             <Card>
                 <div className='blogHeader'>
-                    <span className='blogCategory'>Featured</span>
-                    <h1 className='postTitle'>Beautiful is always beautiful</h1>
-                    <span className='postedBy'>posted on July 21, 2020 by Yahya Rehman</span>
+                    <span className='blogCategory'>{post.blogCategory}</span>
+                    <h1 className='postTitle'>{post.blogTitle}</h1>
+                    <span className='postedBy'>{post.postedOn}, by {post.author}</span>
                 </div>
             
                  <div className='postImageContainer'>
-                    <img src={'https://i.ibb.co/RCszXth/IMG-8655.jpg'} alt='Post Image'/>
+                    <img src={`${post.blogImage}`} alt='Post Image'/>
+                </div>
+
+                <div className='postContent'>
+                    <h3>{post.blogTitle}</h3>
+                    <p>{post.blogText}</p>
+                
                 </div>
             </Card>
         </div>

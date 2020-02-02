@@ -19,7 +19,7 @@ function App() {
 
         <Route path='/' exact component={HomePage} />
         <Route path='/contact' component={Contact}/>
-        <Route path='/post' component = {Post} />
+        <Route path='/post/:postId' component = {Post} />
         <Route path='/about' component={About} />
       </div>
     </BrowserRouter>

@@ -4,11 +4,13 @@ import './post.styles.css'
 import BlogPost from '../../components/blogpost/blogpost.component';
 import SideBar from '../../components/sidebar/sidebar.component';
 
-const Post = () => {
+const Post = (props) => {
+
+    console.log(props)
     return(
         <div>
             <section className='container'>
-                <BlogPost />
+                <BlogPost {...props} />
                 <SideBar />
             </section>
         </div>
