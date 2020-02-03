@@ -6,7 +6,7 @@ import './logo.styles.css'
 const Logo = () => {
     return(
         <div className='logo'>
-            <Link to='/'>Yblog</Link>
+            <Link to='/'>Fernweh</Link>
         </div>
     )
 }

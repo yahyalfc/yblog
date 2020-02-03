@@ -17,7 +17,7 @@ const Navbar = () => {
         <div className='navbar'>
             <ul className='navbarMenu'>
                <li><NavLink to='/'>Home</NavLink></li>
-               <li><NavLink to='/post'>Posts</NavLink></li> 
+               <li><NavLink to='/posts'>Posts</NavLink></li> 
                
             
             </ul>

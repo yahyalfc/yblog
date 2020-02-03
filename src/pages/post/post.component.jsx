@@ -10,8 +10,8 @@ const Post = (props) => {
     return(
         <div>
             <section className='container'>
-                <BlogPost {...props} />
-                <SideBar />
+                <BlogPost style={{width: '100%'}} {...props} />
+             
             </section>
         </div>
     )

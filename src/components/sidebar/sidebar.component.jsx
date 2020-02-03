@@ -6,11 +6,12 @@ import blogPost from '../../data/blog.json'
 
 import Card from '../card/card.component'
 
-const SideBar = () => {
+const SideBar = (props) => {
     const myStyle = {
-        marginBottom: '20px'    
+        marginBottom: '20px'
+       
     }
-
+    
     const [posts, setPosts] = useState ([])
 
 
@@ -21,8 +22,8 @@ const SideBar = () => {
 
 
     return(
-        <div className='sideBarContainer'>
-            <Card style={myStyle}>
+        <div className='sideBarContainer' style={props.style} >
+            <Card style={myStyle} >
                 <div className='cardHeader'>
                     <span>About</span>
                 </div>    
@@ -31,21 +32,22 @@ const SideBar = () => {
                        <img src={'https://i.ibb.co/1dSSKDf/futy.jpg'} alt='dp'/>
                     </div>
                       
-                <span className='personalBio'>My name is Yahya Rehman. I'm a software developer specializing in <span className='pbio2'>front end development. </span></span>
-            </Card>
+                    <p className='personalBio'>My name is Yahya Rehman. I'm a software developer specializing in front end development. I love photography and exploration and here in this blog i've shared some pictures of the places i've visited. </p>
+                  
+        </Card>
 
-            <Card>
-                <div className='cardHeader'>
+            <Card style={props.customStyle} >
+                <div className='cardHeader' >
                     <span>Recent Posts</span>
                 </div>
 
-                <div className='recentPosts'>
+                <div className='recentPosts' >
                  {
                     posts.map(post => {
                         
                         return (
                             <NavLink key={post.id} to = {`/post/${post.id}`} >
-                                <div className='recentPost'>
+                                <div className='recentPost' >
                                     <h3>{post.blogTitle} </h3>
                                     <span>{post.postedOn}</span>
                                 </div>

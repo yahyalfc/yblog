@@ -1,11 +1,14 @@
 .galleryPost{
     display: flex;
     justify-content: space-between;
+    
 }
 .galleryPost img{
     width: 100%;
+    
 }
 .sideImageWrapper div{
+    position: relative;
     padding: 1px;
     box-sizing: border-box;
     width: 100%;
@@ -48,4 +51,9 @@
 }
 .buttonStuff{
     text-align: center;
+}
+.homeContainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }

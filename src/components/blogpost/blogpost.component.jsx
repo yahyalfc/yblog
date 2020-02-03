@@ -6,7 +6,7 @@ import blogPost from '../../data/blog.json'
 import Card from '../card/card.component'
 
 const BlogPost = (props) => {
-    console.log(props)
+   // console.log(props)
 
     const [post, setPost] = useState ({})
     const [postId, setPostId] = useState('')
@@ -20,7 +20,7 @@ const BlogPost = (props) => {
     //only rerender when post gets changed
 
     return(
-        <div className='blogPostContainer'>
+        <div style={props.style}>
             <Card>
                 <div className='blogHeader'>
                     <span className='blogCategory'>{post.blogCategory}</span>
