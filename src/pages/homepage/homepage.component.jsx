@@ -26,7 +26,7 @@ const HomePage = (props) => {
     //lets destucture blogposts sheosar stuff.s
     const nangaparbatStuff = blogPosts.data[0]
     const sheosarStuff = blogPosts.data[1]
-    const ghizerStuff = blogPosts.data[2]
+    const ramaStuff = blogPosts.data[2]
     const chittakathaStuff = blogPosts.data[3]
     const saralStuff = blogPosts.data[4]
 
@@ -35,7 +35,7 @@ const HomePage = (props) => {
         <Card>
             <div className='galleryPost' style={{galleryStyle}}>
                 <section style={{width: '70%'}}>
-                    <NavLink to={`/post/${nangaparbatStuff.id}`}>
+                    <NavLink to={`/post/${nangaparbatStuff.slug}`}>
                     <div>
                         <img src={`${nangaparbatStuff.blogImage}`} alt=''/>
                     </div>
@@ -44,21 +44,21 @@ const HomePage = (props) => {
 
 
                 <section className='sideImageWrapper' style={{width: '30%'}}>
-                    <NavLink to={`/post/${saralStuff.id}`}>
+                    <NavLink to={`/post/${saralStuff.slug}`}>
                     <div style={{height: `${sideImageHeight+85}px`}}>
                         <img src={`${saralStuff.blogImage}`} alt=''/>
                     </div>
                     </NavLink>
 
-                    <NavLink to={`/post/${chittakathaStuff.id}`}>
+                    <NavLink to={`/post/${chittakathaStuff.slug}`}>
                     <div style={{height: `${sideImageHeight+85}px`}}>
                         <img src={`${chittakathaStuff.blogImage}`} alt=''/>
                     </div>
                     </NavLink>
 
-                    <NavLink to={`/post/${ghizerStuff.id}`}>
+                    <NavLink to={`/post/${sheosarStuff.slug}`}>
                     <div style={{height: `${sideImageHeight+87}px`}}>
-                        <img src={`${ghizerStuff.blogImage}`} alt=''/>
+                        <img src={`${sheosarStuff.blogImage}`} alt=''/>
                     </div>
                     </NavLink>
                 </section>              
@@ -69,19 +69,19 @@ const HomePage = (props) => {
                 <div className='homeContainer'>
                     <section style={{width: '70%'}}>
                         <div className='contentWrapper' style={{textAlign:'center'}}>
-                            <span>{sheosarStuff.blogCategory}</span>
-                            <h2>{sheosarStuff.blogTitle}</h2>
-                            <span className='postedOn' > {sheosarStuff.postedOn} by {sheosarStuff.author} </span>
+                            <span>{ramaStuff.blogCategory}</span>
+                            <h2 className='frikkinHeader'>{ramaStuff.blogTitle}</h2>
+                            <span className='postedOn' > {ramaStuff.postedOn} by {ramaStuff.author} </span>
                         </div>
 
                         <div className='postImageWrapper'>
-                            <img src={`${sheosarStuff.blogImage}`} alt='' />
+                            <img src={`${ramaStuff.blogImage}`} alt='' />
 
                             <div className='buttonStuff'>
                                 
 
                                 <div className={`content ${toggledClass}`}>
-                                <p> {sheosarStuff.blogText} </p>
+                                <p className='textBlog'> {ramaStuff.blogText} </p>
                                 </div>
                             
 

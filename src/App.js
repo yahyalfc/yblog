@@ -17,7 +17,7 @@ function App() {
         <Hero />
         <Route path='/posts' component={AllPosts} />
         <Route path='/' exact component={HomePage} />
-        <Route path='/post/:postId' component = {Post} />
+        <Route path='/post/:slug' component = {Post} />
       </div>
     </BrowserRouter>
     

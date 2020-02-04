@@ -6,6 +6,7 @@ import './logo.styles.css'
 const Logo = () => {
     return(
         <div className='logo'>
+            
             <Link to='/'>Fernweh</Link>
         </div>
     )

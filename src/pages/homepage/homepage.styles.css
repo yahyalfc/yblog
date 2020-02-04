@@ -33,21 +33,29 @@
 }
 
 .contentWrapper span{
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 400;
     padding: 5px;
     color: #6c6c6c;
 }
 .postedOn{
+    color: red;
     font-style: italic;
+    font-size: 10px;
 }
 .contentWrapper h3{
+    
     padding: 5px;
     color: black;
     letter-spacing: 1px;
-    font-size: 15px;
-    font-weight: 500;
+    font-weight: 400;
     margin: 0;
+}
+.frikkinHeader{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    
 }
 .buttonStuff{
     text-align: center;
@@ -70,13 +78,31 @@
     height: auto;
   }
   
-  .button {
-    background-color: #4CAF50; /* Green */
+  button {
+    margin-top: 20px;
+    background-color: whitesmoke; /* Green */
     border: none;
-    color: white;
-    padding: 15px 32px;
+    color: black;
+    padding: 15px 10px;
+    border-radius: 4px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 15px;
+    
   }  
+  button:hover{
+      background-color: black;
+      color: whitesmoke;
+  }
+  button:focus {outline:0;}
+
+  .textBlog{
+      font-size: 15px;
+    font-family: 'Oswald', sans-serif;
+    text-align: justify;
+    margin: 25px;
+    color: #565673;
+    letter-spacing: 0.5px;
+    font-weight: 300;
+  }

@@ -34,7 +34,7 @@ const BlogPosts = (props) => {
                  </div>
              
   
-             <NavLink to={`post/${id+1}`} >
+             <NavLink to={`post/${post.slug}`} >
 
                   <div className='postImageContainer'>
                      <img src={`${post.blogImage}`} alt='Post Image'/>

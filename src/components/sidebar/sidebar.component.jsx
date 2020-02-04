@@ -8,8 +8,10 @@ import Card from '../card/card.component'
 
 const SideBar = (props) => {
     const myStyle = {
-        marginBottom: '20px'
-       
+        marginBottom: '20px', 
+       paddingLeft: '3px',
+       paddingRight: '3px',
+       paddingBottom: '3px'
     }
     
     const [posts, setPosts] = useState ([])
@@ -32,7 +34,8 @@ const SideBar = (props) => {
                        <img src={'https://i.ibb.co/1dSSKDf/futy.jpg'} alt='dp'/>
                     </div>
                       
-                    <p className='personalBio'>My name is Yahya Rehman. I'm a software developer specializing in front end development. I love photography and exploration and here in this blog i've shared some pictures of the places i've visited. </p>
+                    <p className='personalBio'>My name is Yahya Rehman and i’m a software developer specialising in front end development. I love to travel and take pictures. In this blog i’ve shared some of my favourite clicks. Enjoy!
+                    </p>
                   
         </Card>
 
@@ -46,9 +49,9 @@ const SideBar = (props) => {
                     posts.map(post => {
                         
                         return (
-                            <NavLink key={post.id} to = {`/post/${post.id}`} >
+                            <NavLink to = {`/post/${post.slug}`} >
                                 <div className='recentPost' >
-                                    <h3>{post.blogTitle} </h3>
+                                    <h3 className='h3underline'>{post.blogTitle} </h3>
                                     <span>{post.postedOn}</span>
                                 </div>
                             </NavLink>

@@ -1,3 +1,7 @@
 .inlineX{
+    
+    filter: blur(0.6px);
+  -webkit-filter: blur(0.6px);
+  
     padding: 50px 0;
 }
