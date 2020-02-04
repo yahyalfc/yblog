@@ -11,7 +11,8 @@ const SideBar = (props) => {
         marginBottom: '20px', 
        paddingLeft: '3px',
        paddingRight: '3px',
-       paddingBottom: '3px'
+       paddingBottom: '3px',
+       boxSizing: 'border-box'
     }
     
     const [posts, setPosts] = useState ([])
