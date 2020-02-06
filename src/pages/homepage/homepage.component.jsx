@@ -24,9 +24,9 @@ const HomePage = (props) => {
 
     return (
     <>
-        <Card>     
-                <section className=''>
-                    
+        <Card style={{maxHeight: '705px', boxSizing: 'border-box'}}>     
+                
+                    <div className='images'>
                     <div className='leftImage'>
                         <NavLink to={`/post/${nangaparbatStuff.slug}`}>
                             <img className='image' src={`${nangaparbatStuff.blogImage}`} alt=''/>
@@ -48,8 +48,9 @@ const HomePage = (props) => {
                             <img className='image' src={`${sheosarStuff.blogImage}`} alt=''/>
                         </NavLink>
                     </div>
+                    </div>
                     
-                </section>
+                
 
 
 

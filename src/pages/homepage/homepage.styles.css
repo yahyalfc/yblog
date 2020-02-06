@@ -122,25 +122,35 @@ max-height: 100%;
   .rightImage {
       width: 30%;
       float: right;
-      max-height: 231px;
+     /* max-height: 180px;  */
+      object-fit: cover;
   }
-  .rightImage:nth-child(2) {
-    height: 230px;
-  }
+
   .rightImage img{
-        max-height: 231px;
-        
-  }
-  .image{
+    object-fit: cover;
     box-sizing: border-box;
-    padding-right: 2px;
-    width: 100%;
+    padding-left: 1px;
+    display: block;
+    padding-bottom: 1px;
+    object-fit: cover;
+    max-height: 235.5px; 
+  }
+  
+  .image{
+   object-fit: cover; 
+    width: 100%; 
     
   }
-  .firstContainer{
-     
+  .rightImage:last-child{
+    max-height: 185.5px ;
+      max-width:100%;
+    
   }
+  .rightImage
+  
   @media only screen and (max-width: 600px) {
       max-height: 232px;
   }
-  
+  .rightImage:nth-last-child(2){
+    max-width:100%;
+  }
