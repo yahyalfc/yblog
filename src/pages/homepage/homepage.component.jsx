@@ -1,7 +1,5 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {NavLink} from 'react-router-dom'
-
-import {Button} from 'react-bootstrap'
 
 import './homepage.styles.css'
 import Card from '../../components/card/card.component'
@@ -15,6 +13,14 @@ const HomePage = (props) => {
     const { expanded } = expand;
     const toggledClass = expanded ? 'expanded' : 'collapsed';
 
+    const [random, setRandom] = useState(0)
+
+    useEffect ( ()=>{
+        const vRan = Math.floor(Math.random() * Math.floor(5));
+        setRandom(vRan)
+    }, [])
+
+   console.log(random)
     //lets destucture blogposts sheosar stuff.s
     const nangaparbatStuff = blogPosts.data[0]
     const sheosarStuff = blogPosts.data[1]
@@ -22,80 +28,73 @@ const HomePage = (props) => {
     const chittakathaStuff = blogPosts.data[3]
     const saralStuff = blogPosts.data[4]
 
+    useEffect(()=>{
+        
+
+        const cutRightImages = () => {
+            let leftImageHeight = document.getElementsByClassName("leftImage")[0].offsetHeight;
+            let cut = document.getElementsByClassName("cut");
+            for(let i = 0; i < cut.length ; i++){
+                cut[i].style.height = leftImageHeight / 3 + "px";
+                console.log(leftImageHeight + "px");
+            }
+        }
+        cutRightImages();
+        window.addEventListener('resize', cutRightImages);
+    });
+        
     return (
     <>
-        <Card style={{maxHeight: '705px', boxSizing: 'border-box'}}>     
-                
-                    <div className='images'>
-                    <div className='leftImage'>
+        
+                <div>
+                    <div className='leftImageContainer'>
                         <NavLink to={`/post/${nangaparbatStuff.slug}`}>
-                            <img className='image' src={`${nangaparbatStuff.blogImage}`} alt=''/>
+                            <img className='leftImage' src={`${nangaparbatStuff.blogImage}`} alt=''/>
                         </NavLink>
                     </div>
                 
                     {/* right side images */}
                     
-                    <div className='rightImage'>
-                        <NavLink to={`/post/${saralStuff.slug}`}>
-                            <img className='image' src={`${saralStuff.blogImage}`} alt=''/>
-                        </NavLink>
-
-                        <NavLink to={`/post/${chittakathaStuff.slug}`}>
-                            <img className='image' src={`${chittakathaStuff.blogImage}`} alt=''/>
-                        </NavLink>
-
-                        <NavLink to={`/post/${sheosarStuff.slug}`}>
-                            <img className='image' src={`${sheosarStuff.blogImage}`} alt=''/>
-                        </NavLink>
-                    </div>
-                    </div>
-                    
-                
-
-
-
-{/*
-<section className='sideImageWrapper' style={{width: '30%', float: 'right'}}>
-                    <NavLink to={`/post/${saralStuff.slug}`}>
-                    <div className='sideImageHeight'>
-                        <img src={`${saralStuff.blogImage}`} alt=''/>
-                    </div>
-                    </NavLink>
-
-                    
-                    <div className='sideImageHeight'>
+                    <div className='rightImages'>
+                        <div className='cut'>
+                            <NavLink to={`/post/${saralStuff.slug}`}>
+                                <img className='image' src={`${saralStuff.blogImage}`} alt=''/>
+                            </NavLink>
+                        </div>
                         
+                        <div className='cut'>
+                            <NavLink to={`/post/${chittakathaStuff.slug}`}>
+                                <img className='image' src={`${chittakathaStuff.blogImage}`} alt=''/>
+                            </NavLink>
+                        </div>    
+                            
+                        <div className='cut'>
+                            <NavLink to={`/post/${sheosarStuff.slug}`}>
+                                <img className='image' src={`${sheosarStuff.blogImage}`} alt=''/>
+                            </NavLink>
+                        </div>             
                     </div>
-                    </NavLink>
-
+                </div>
                     
-                    <div className='sideImageHeight'>
-                        
-                    </div>
-                    </NavLink>
-                </section>        
-*/}
-                      
-           
-        </Card>
         
+       
             <Card style={{marginBottom: '20px'}}>
                 <div className='homeContainer'>
                     <section style={{width: '70%'}}>
                         <div className='contentWrapper' style={{textAlign:'center'}}>
-                            <span>{ramaStuff.blogCategory}</span>
-                            <h2 className='frikkinHeader'>{ramaStuff.blogTitle}</h2>
-                            <span className='postedOn' > {ramaStuff.postedOn} by {ramaStuff.author} </span>
+                            <span>{blogPosts.data[random].blogCategory}</span>
+                            <h2 className='frikkinHeader'>{blogPosts.data[random].blogTitle}</h2>
+                            <span className='postedOn' > {blogPosts.data[random].postedOn} by {ramaStuff.author} </span>
                         </div>
 
                         <div className='postImageWrapper'>
-                            <img src={`${ramaStuff.blogImage}`} alt='' />
+                            <img src={`${blogPosts.data[random].blogImage}`} alt='' />
 
                             <div className='buttonStuff'>
                                 
 
                                 <div className={`content ${toggledClass}`}>
-                                <p className='textBlog'> {ramaStuff.blogText} </p>
+                                <p className='textBlog'> {blogPosts.data[random].blogText} </p>
                                 </div>
                             
 
@@ -106,7 +105,7 @@ const HomePage = (props) => {
                             
                         </div>
 
-                       
+                  
                     </section>
 
                     <section style={{width: '30%', marginBottom: '20px'}}>

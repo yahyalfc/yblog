@@ -115,42 +115,51 @@ max-height: 100%;
   }
 
 
-  .leftImage {
+  .leftImageContainer{
+    width:70%;
+    float:left;
+  }
+  .leftImage{
+      width:100%;
+  }
+  .rightImages{
+    width:30%;
+    float:right;
+  }
+  .image{
+    padding: 1px;
+    box-sizing: border-box;
+    width:100%;
+    object-fit: contain;
+  }
+  .cut{
+    overflow:hidden;
+    width:100%;
+    margin:0;
+  }
+
+
+  /*
+    .leftImage {
       width: 70%;
       float: left;
   }
   .rightImage {
       width: 30%;
       float: right;
-     /* max-height: 180px;  */
-      object-fit: cover;
+      
   }
 
-  .rightImage img{
-    object-fit: cover;
-    box-sizing: border-box;
-    padding-left: 1px;
-    display: block;
-    padding-bottom: 1px;
-    object-fit: cover;
-    max-height: 235.5px; 
-  }
-  
   .image{
-   object-fit: cover; 
-    width: 100%; 
-    
+      width: 100%;
   }
-  .rightImage:last-child{
-    max-height: 185.5px ;
-      max-width:100%;
-    
+  .cut{
+    overflow:hidden;
+    width:100%;
   }
-  .rightImage
-  
-  @media only screen and (max-width: 600px) {
-      max-height: 232px;
-  }
-  .rightImage:nth-last-child(2){
-    max-width:100%;
-  }
+.rightImage img{
+    padding-left: 1px;
+    padding-bottom: 1px;
+    display: block;
+}
+  */
