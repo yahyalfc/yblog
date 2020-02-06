@@ -1,10 +1,9 @@
 .logo{
     text-align: center;
-    
+    font-family: 'Kelly Slab', cursive;
 }
 .logo a{
-   /* font-family: 'Dancing Script', cursive; */
-   /*font-family: 'Permanent Marker', cursive; */
+   
    font-family: 'Kelly Slab', cursive;
     font-size: 70px;
     text-decoration: none;

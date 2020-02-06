@@ -11,14 +11,6 @@ import blogPosts from '../../data/blog.json'
 
 
 const HomePage = (props) => {
-    const galleryHeight = 450;
-    const galleryStyle = {
-        height: galleryHeight+'px',
-        overflow: 'hidden'
-    }
-
-    const sideImageHeight = galleryHeight/3;
-
     const [expand, setExpand] = useState(false)
     const { expanded } = expand;
     const toggledClass = expanded ? 'expanded' : 'collapsed';
@@ -32,37 +24,58 @@ const HomePage = (props) => {
 
     return (
     <>
-        <Card>
-            <div className='galleryPost' style={{galleryStyle}}>
-                <section style={{width: '70%'}}>
-                    <NavLink to={`/post/${nangaparbatStuff.slug}`}>
-                    <div>
-                        <img src={`${nangaparbatStuff.blogImage}`} alt=''/>
+        <Card>     
+                <section className=''>
+                    
+                    <div className='leftImage'>
+                        <NavLink to={`/post/${nangaparbatStuff.slug}`}>
+                            <img className='image' src={`${nangaparbatStuff.blogImage}`} alt=''/>
+                        </NavLink>
                     </div>
-                    </NavLink>
+                
+                    {/* right side images */}
+                    
+                    <div className='rightImage'>
+                        <NavLink to={`/post/${saralStuff.slug}`}>
+                            <img className='image' src={`${saralStuff.blogImage}`} alt=''/>
+                        </NavLink>
+
+                        <NavLink to={`/post/${chittakathaStuff.slug}`}>
+                            <img className='image' src={`${chittakathaStuff.blogImage}`} alt=''/>
+                        </NavLink>
+
+                        <NavLink to={`/post/${sheosarStuff.slug}`}>
+                            <img className='image' src={`${sheosarStuff.blogImage}`} alt=''/>
+                        </NavLink>
+                    </div>
+                    
                 </section>
 
 
-                <section className='sideImageWrapper' style={{width: '30%'}}>
+
+{/*
+<section className='sideImageWrapper' style={{width: '30%', float: 'right'}}>
                     <NavLink to={`/post/${saralStuff.slug}`}>
-                    <div style={{height: `${sideImageHeight+85}px`}}>
+                    <div className='sideImageHeight'>
                         <img src={`${saralStuff.blogImage}`} alt=''/>
                     </div>
                     </NavLink>
 
-                    <NavLink to={`/post/${chittakathaStuff.slug}`}>
-                    <div style={{height: `${sideImageHeight+85}px`}}>
-                        <img src={`${chittakathaStuff.blogImage}`} alt=''/>
+                    
+                    <div className='sideImageHeight'>
+                        
                     </div>
                     </NavLink>
 
-                    <NavLink to={`/post/${sheosarStuff.slug}`}>
-                    <div style={{height: `${sideImageHeight+87}px`}}>
-                        <img src={`${sheosarStuff.blogImage}`} alt=''/>
+                    
+                    <div className='sideImageHeight'>
+                        
                     </div>
                     </NavLink>
-                </section>              
-            </div>  
+                </section>        
+*/}
+                      
+           
         </Card>
         
             <Card style={{marginBottom: '20px'}}>

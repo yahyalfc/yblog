@@ -4,20 +4,21 @@
     
 }
 .galleryPost img{
-    width: 100%;
-    
+    width: 100%;   
 }
 .sideImageWrapper div{
-    position: relative;
+    
     padding: 1px;
     box-sizing: border-box;
-    width: 100%;
-}
-.sideImageWrapper img{
-    max-height: 100%;
     max-width: 100%;
-    object-fit: cover;
 }
+.sideImageWrapper img{ 
+    position: relative;
+    min-width: 100%;
+    max-height: 100%;
+   
+}
+ 
 .postImageWrapper{
     height: 100%;
     overflow: hidden;
@@ -27,8 +28,7 @@
   margin-left: auto;
   margin-right: auto;
   max-width: 95%;
-    max-height: 100%;
-    
+max-height: 100%;
     object-fit: cover;
 }
 
@@ -106,3 +106,41 @@
     letter-spacing: 0.5px;
     font-weight: 300;
   }
+  .sideImageHeight{
+      height: 235px;
+  }
+  .sideImageHeight:last-child{
+    height: 235.5px;
+    max-height: 100%;
+  }
+
+
+  .leftImage {
+      width: 70%;
+      float: left;
+  }
+  .rightImage {
+      width: 30%;
+      float: right;
+      max-height: 231px;
+  }
+  .rightImage:nth-child(2) {
+    height: 230px;
+  }
+  .rightImage img{
+        max-height: 231px;
+        
+  }
+  .image{
+    box-sizing: border-box;
+    padding-right: 2px;
+    width: 100%;
+    
+  }
+  .firstContainer{
+     
+  }
+  @media only screen and (max-width: 600px) {
+      max-height: 232px;
+  }
+  
