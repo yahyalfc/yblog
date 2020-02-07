@@ -16,15 +16,15 @@ const HomePage = (props) => {
     const [random, setRandom] = useState(0)
 
     useEffect ( ()=>{
-        const vRan = Math.floor(Math.random() * Math.floor(5));
+        const vRan = Math.floor(Math.random() * Math.floor(blogPosts.data.length));
         setRandom(vRan)
     }, [])
 
    console.log(random)
-    //lets destucture blogposts sheosar stuff.s
+   console.log(blogPosts.data.length)
+    //lets destucture blogposts
     const nangaparbatStuff = blogPosts.data[0]
     const sheosarStuff = blogPosts.data[1]
-    const ramaStuff = blogPosts.data[2]
     const chittakathaStuff = blogPosts.data[3]
     const saralStuff = blogPosts.data[4]
 
@@ -84,7 +84,7 @@ const HomePage = (props) => {
                         <div className='contentWrapper' style={{textAlign:'center'}}>
                             <span>{blogPosts.data[random].blogCategory}</span>
                             <h2 className='frikkinHeader'>{blogPosts.data[random].blogTitle}</h2>
-                            <span className='postedOn' > {blogPosts.data[random].postedOn} by {ramaStuff.author} </span>
+                            <span className='postedOn' > {blogPosts.data[random].postedOn} by {blogPosts.data[random].author} </span>
                         </div>
 
                         <div className='postImageWrapper'>
