@@ -10,7 +10,7 @@ const Navbar = () => {
 
     const submitSearch = (event) => {
         event.preventDefault()
-        alert('search working')
+        alert('Search not implemented yet!')
         console.log(event)
     }
     return (

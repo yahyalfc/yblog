@@ -35,7 +35,7 @@ const SideBar = (props) => {
                        <img src={'https://i.ibb.co/6BGn105/IMG-2466.jpg'} alt='dp'/>
                     </div>
                       
-                    <p className='personalBio'>My name is Yahya Rehman and i’m a software developer specialising in front end development. I love to travel and take pictures. In this blog i’ve shared some of my favourite clicks. Enjoy!
+                    <p className='personalBio'>My name is Yahya Rehman and i’m a software developer specialising in front end development. I love to travel and take pictures. In this blog i’ve shared some of my favourite clicks with a bit of introduction. Enjoy!
                     </p>
                   
         </Card>
