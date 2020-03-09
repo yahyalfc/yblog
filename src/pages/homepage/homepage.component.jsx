@@ -80,7 +80,7 @@ const HomePage = (props) => {
        
             <Card style={{marginBottom: '20px'}}>
                 <div className='homeContainer'>
-                    <section style={{width: '70%'}}>
+                    <section style={{width: '100%'}}>
                         <div className='contentWrapper' style={{textAlign:'center'}}>
                             <span>{blogPosts.data[random].blogCategory}</span>
                             <h2 className='frikkinHeader'>{blogPosts.data[random].blogTitle}</h2>
@@ -88,8 +88,9 @@ const HomePage = (props) => {
                         </div>
 
                         <div className='postImageWrapper'>
-                            <img src={`${blogPosts.data[random].blogImage}`} alt='' />
-
+                            <NavLink to={`/post/${blogPosts.data[random].slug}`}>
+                                <img src={`${blogPosts.data[random].blogImage}`} alt='' />
+                            </NavLink>
                             <div className='buttonStuff'>
                                 
 
@@ -98,9 +99,11 @@ const HomePage = (props) => {
                                 </div>
                             
 
+                               { /*
                                 <button onClick={() => setExpand({ expanded: !expanded })}>
                                 {expanded ? 'Read Less' : 'Read More'}
                                 </button>
+                               */ } 
                             </div>
                             
                         </div>
@@ -108,9 +111,12 @@ const HomePage = (props) => {
                   
                     </section>
 
-                    <section style={{width: '30%', marginBottom: '20px'}}>
+                    { /*
+                        <section style={{width: '30%', marginBottom: '20px'}}>
                         <SideBar style={{width: '100%', letterSpacing: '0.5px', backgroundColor: '#e9eaea', borderLeft: '20px solid #e9eaea', borderTop: '20px solid #e9eaea', boxSizing: 'border-box'}} />
-                    </section>
+                        </section>
+                    */}
+                    
                 </div>  
             </Card>  
 

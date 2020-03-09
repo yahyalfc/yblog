@@ -98,10 +98,10 @@ max-height: 100%;
   button:focus {outline:0;}
 
   .textBlog{
-      font-size: 15px;
+    font-size: 15px;
     font-family: 'Oswald', sans-serif;
     text-align: justify;
-    margin: 25px;
+    margin: 40px;
     color: #565673;
     letter-spacing: 0.5px;
     font-weight: 300;

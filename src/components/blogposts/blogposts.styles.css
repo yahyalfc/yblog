@@ -1,7 +1,7 @@
 .content {
     overflow: hidden;
     line-height: 1.2em;
-    height: 3.8em;
+    height: 12em;
   }
   .content.collapsed{
     overflow: hidden;
